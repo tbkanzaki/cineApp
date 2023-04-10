@@ -18,8 +18,21 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
 
+    <script>
+      function mostra_alerta()
+     {
+        alert("Seu cadastro foi efetuado com sucesso!");
+      }
+    // rest of your code
+    </script>
+
 </head>
 <body>
+  <?php if ( isset($_GET['sucesso']) && $_GET['sucesso'] == 1 ){  ?>
+    <script>
+      alert("Seu cadastro foi efetuado com sucesso!");
+    </script>
+<?php } ?>
   <div class="wrapper">
     <!-- Sidebar Holder -->
     <?php include 'sidebar.html' ?>

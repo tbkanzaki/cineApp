@@ -1,5 +1,5 @@
 <?php 
-  header("location:filmes_todos.php");
+  //header('location:filmes_todos.php?sucesso=1');
 
   include 'open_dbconn.php'; 
       
@@ -21,5 +21,9 @@
   $stmt->close();
   include 'close_dbconn.php';
 
+  echo "<SCRIPT>
+        alert('Sucesso!')
+        window.location.replace('filmes_todos.php');
+        </SCRIPT>";
 ?>
 
